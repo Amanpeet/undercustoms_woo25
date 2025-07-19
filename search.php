@@ -4,73 +4,76 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package undercustoms
+ * @package undercustomz
  */
 
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-      <div class="titlemon">
-        <div class="container">
-          <div class="title text-centerx">
-            <h3 class="entry-title animate-typing" data-type-speed="60"> Search Results </h3>
-          </div>
-        </div>
+<main id="primary" class="site-main">
+  <div class="titlemon">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="entry-title"> <?php the_archive_title(); ?> </h1>
+        <?php the_archive_description( '<p class="archive-description">', '</p>' ); ?>
       </div>
+    </div>
+  </div>
 
-      <div class="container">
-        <div class="row py-5">
+  <section class="page-section bg-ghost">
+    <div class="container py-4">
+      <div class="row">
 
-          <div class="col-md-8 col-lg-9 content-actualxxx">
+        <!-- <div class="col-md-3 col-lg-3 sidebar pe-lg-5">
+          <?php //get_sidebar(); ?>
+        </div> -->
 
-            <?php if ( have_posts() ) : ?>
+        <div class="col-md col-lg page-content">
+          <?php if ( have_posts() ) : ?>
 
-              <header class="page-header">
-                <h1 class="page-title">
-                  <?php
-                  /* translators: %s: search query. */
-                  printf( esc_html__( 'Search Results for: %s', 'undercustoms' ), '<span>' . get_search_query() . '</span>' );
-                  ?>
-                </h1>
-              </header><!-- .page-header -->
+            <header class="page-header">
+              <h3 class="page-title">
+                <?php
+                /* translators: %s: search query. */
+                printf( esc_html__( 'Search Results for: %s', 'undercustomz' ), '<span>' . get_search_query() . '</span>' );
+                ?>
+              </h3>
+            </header><!-- .page-header -->
 
-              <?php
-              /* Start the Loop */
-              while ( have_posts() ) :
-                the_post();
-                /**
-                 * Run the loop for the search to output the results.
-                 * If you want to overload this in a child theme then include a file
-                 * called content-search.php and that will be used instead.
-                 */
-                get_template_part( 'template-parts/content', 'blogpost' );
+            <?php
+            /* Start the Loop */
+            while ( have_posts() ) :
+              the_post();
 
-              endwhile;
+              /**
+               * Run the loop for the search to output the results.
+               * If you want to overload this in a child theme then include a file
+               * called content-search.php and that will be used instead.
+               */
+              get_template_part( 'template-parts/content', 'search' );
 
-              the_posts_navigation();
+            endwhile;
 
-            else :
+            the_posts_navigation();
 
-              get_template_part( 'template-parts/content', 'none' );
+          else :
 
-            endif;
-            ?>
+            get_template_part( 'template-parts/content', 'none' );
 
-          </div>
-
-          <div class="col-md-4 col-lg-3 sidebar">
-            <!-- sidebar.php heavily modified -->
-            <?php get_sidebar(); ?>
-          </div>
+          endif;
+          ?>
 
         </div>
-      </div>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+</main><!-- #main -->
 
 <?php
+get_sidebar();
 get_footer();

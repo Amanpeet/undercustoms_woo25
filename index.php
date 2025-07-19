@@ -9,71 +9,66 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package undercustoms
+ * @package undercustomz
  */
 
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<main id="primary" class="site-main">
 
-      <div class="titlemon">
-        <div class="container">
-          <div class="title text-centerxx">
-            <h3 class="entry-title animate-typing" data-type-speed="60"> Latest Posts from our Blog </h3>
-          </div>
-        </div>
+  <div class="titlemon">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="entry-title"> <?php //echo get_the_title(); ?> Blog </h1>
       </div>
+    </div>
+  </div>
 
-      <div class="container">
-        <div class="row py-5">
-          <!-- <div class="col-md-2 col-lg-2 sidebar">
-            <?php //get_sidebar(); ?>
-          </div> -->
-          <div class="col-md col-lg-10 content-actualxxx mx-auto">
+  <section class="page-section bg-ghost">
+    <div class="container py-4">
+      <div class="row">
 
-            <?php
+        <!-- <div class="col-md-3 col-lg-3 sidebar pe-lg-5">
+          <?php //get_sidebar(); ?>
+        </div> -->
+
+        <div class="col-md col-lg-10 mx-auto page-content">
+          <?php
             if ( have_posts() ) :
-
-              if ( is_home() && ! is_front_page() ) :
-                ?>
-                <header>
-                  <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                </header>
-                <?php
-              endif;
 
               /* Start the Loop */
               while ( have_posts() ) :
                 the_post();
+
                 /*
-                 * Include the Post-Type-specific template for the content.
-                 * If you want to override this in a child theme, then include a file
-                 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-                 */
-                get_template_part( 'template-parts/content', 'blogpost' );
+                * Include the Post-Type-specific template for the content.
+                * If you want to override this in a child theme, then include a file
+                * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+                */
                 // get_template_part( 'template-parts/content', get_post_type() );
+                get_template_part( 'template-parts/content', 'blogpost' );
 
               endwhile;
-              the_posts_navigation()
-              ;
+
+              the_posts_navigation();
+
             else :
 
               get_template_part( 'template-parts/content', 'none' );
 
             endif;
-            ?>
-
-          </div>
-
-
-
+          ?>
         </div>
-      </div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+      </div>
+    </div>
+  </section>
+
+
+
+</main><!-- #main -->
 
 <?php
+// get_sidebar();
 get_footer();

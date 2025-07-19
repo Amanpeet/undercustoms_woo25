@@ -9,38 +9,38 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package undercustoms
+ * @package undercustomz
  */
 
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<main id="primary" class="site-main">
 
-      <div class="titlemon">
-        <div class="container">
-          <div class="title text-center">
-            <h3 class="page-title animate-typing" data-type-speed="60"> <?php woocommerce_page_title(); ?> </h3>
-          </div>
-        </div>
+  <div class="titlemon">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="entry-title"> <?php woocommerce_page_title(); ?> </h1>
       </div>
+    </div>
+  </div>
 
-      <div class="container woocustoms-archive">
-        <div class="row py-5">
-          <div class="col-md-3 col-lg-3 sidebar pe-lg-5">
-            <?php get_sidebar(); ?>
-          </div>
-          <div class="col-md col-lg woo-content">
+  <section class="page-section bg-light py-5 woocustoms-archive">
+    <div class="container">
+      <div class="row">
 
-            <?php woocommerce_content(); ?>
-
-          </div>
-
+        <div class="col-md-3 col-lg-3 sidebar pe-lg-4">
+          <?php get_sidebar(); ?>
         </div>
+
+        <div class="col-md col-lg page-contentxxx">
+          <?php woocommerce_content(); ?>
+        </div>
+
       </div>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </div>
+  </section>
+</main><!-- #main -->
 
 <?php
 get_footer();

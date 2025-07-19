@@ -4,28 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package undercustoms
+ * @package undercustomz
  */
 
-// if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-// 	return;
-// }
-?>
-
-<!-- <aside id="wordpress-sidebarx" class="widget-area">
-	<?php //dynamic_sidebar( 'sidebar-1' ); ?>
-</aside> -->
-
-<aside id="wordpress-sidebar" class="widget-area">
-<?php
-if(class_exists('WooCommerce')) {
-  if ( is_woocommerce() || is_cart() || is_checkout() ) {
-    if ( is_active_sidebar( 'woocommerce-sidebar' ) ) {
-      dynamic_sidebar( 'woocommerce-sidebar' );
-    }
-  }
-} else {
-  dynamic_sidebar( 'sidebar-1' );
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
 }
 ?>
-</aside>
+
+<aside id="secondary" class="widget-area">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside><!-- #secondary -->

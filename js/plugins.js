@@ -111,33 +111,6 @@ jQuery(document).ready(function( $ ) { //noconflicts
   }
   site_search();
 
-
-  //________graph images moving function above	________//
-  $.fn.bgscroll = $.fn.bgScroll = function (options) {
-    if (!this.length) return this;
-    if (!options) options = {};
-    if (!window.scrollElements) window.scrollElements = {};
-    for (var i = 0; i < this.length; i++) {
-      var allowedChars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-      var randomId = '';
-      for (var l = 0; l < 5; l++) randomId += allowedChars.charAt(Math.floor(Math.random() * allowedChars.length));
-      this[i].current = 0;
-      this[i].scrollSpeed = options.scrollSpeed ? options.scrollSpeed : 70;
-      this[i].direction = options.direction ? options.direction : 'h';
-      window.scrollElements[randomId] = this[i];
-      eval('window[randomId]=function(){var axis=0;var e=window.scrollElements.' + randomId + ';e.current -= 1;if (e.direction == "h") axis = e.current + "px 0";else if (e.direction == "v") axis = "0 " + e.current + "px";else if (e.direction == "d") axis = e.current + "px " + e.current + "px";$( e ).css("background-position", axis);}');
-      setInterval('window.' + randomId + '()', options.scrollSpeed ? options.scrollSpeed : 70);
-    }
-    return this;
-  }
-  function bg_moving(){
-    jQuery( function() {
-    jQuery('.bg-moving').bgscroll({scrollSpeed:20 , direction:'h' });
-    });
-  }
-  bg_moving();
-
-
   //Smooth scrolling with links v2
   // $('a.inner-link, .menu-item a[href*=\\#]').on('click', function (event) {
   //   if(this.pathname === window.location.pathname){
@@ -154,36 +127,6 @@ jQuery(document).ready(function( $ ) { //noconflicts
     event.preventDefault();
     $('html, body').animate({ scrollTop: $($.attr(this, 'href')).offset().top - 200 }, 500);
   });
-
-  // Simple Parallax
-  var parallax_img = document.getElementsByClassName('parallax-img');
-  // new simpleParallax(parallax_img);
-  new simpleParallax(parallax_img, {
-    scale: 1.2
-  });
-
-  //destroy on phones
-  if( getMobileOS() ){
-    // parallax_img.destroy();
-    console.log('destroyed');
-  }
-
-  //check if phones
-  function getMobileOS() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    // console.log('user agent: '+userAgent);
-    if (/windows phone/i.test(userAgent)) {
-      return true;
-    }
-    if (/android/i.test(userAgent)) {
-      return true;
-    }
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      return true;
-    }
-    return false;
-  }
-
 
   //back to top
   backToTop();

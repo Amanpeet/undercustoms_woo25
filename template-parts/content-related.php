@@ -4,13 +4,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package undercustoms
+ * @package undercustomz
  */
 
 ?>
 
 <div class="related-posts">
-  <div class="row">
+  <div class="row g-lg-5">
     <?php
     // TO SHOW THE PAGE CONTENTS
     $args = array(

@@ -1,46 +1,53 @@
 <?php
 /**
- * The template for displaying all pages
+ * The Template for displaying all single products
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * This template can be overridden by copying it to yourtheme/woocommerce/single-product.php.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
  *
- * @package undercustoms
+ * @see         https://woocommerce.com/document/template-structure/
+ * @package     WooCommerce\Templates
+ * @version     1.6.4
  */
 
-get_header();
-?>
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+get_header( 'shop' ); ?>
 
-      <div class="titlemon">
-        <div class="container">
-          <div class="title text-center">
-            <h3 class="page-title animate-typing" data-type-speed="60"> <?php woocommerce_page_title(); ?> </h3>
-          </div>
-        </div>
+<main id="primary" class="site-main">
+
+  <!-- <div class="titlemon">
+    <div class="container">
+      <div class="text-start">
+        <h1 class="entry-title"> <?php woocommerce_page_title(); ?> </h1>
       </div>
+    </div>
+  </div> -->
 
-      <div class="container woocustoms-single">
-        <div class="row py-5">
-          <!-- <div class="col-md-3 col-lg-3 sidebar pe-lg-5">
-            <?php //get_sidebar(); ?>
-          </div> -->
-          <div class="col-md col-lg woo-content">
+  <section class="page-section bg-light py-5 woocustoms-single">
+    <div class="container">
+      <div class="row">
 
-            <?php woocommerce_content(); ?>
-
-          </div>
-
+        <div class="col-md col-lg page-content py-4">
+          <?php woocommerce_content(); ?>
         </div>
+
+        <!-- <div class="col-md-3 col-lg-3 sidebar pe-lg-5">
+          <?php //get_sidebar(); ?>
+        </div> -->
+
       </div>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </div>
+  </section>
+</main><!-- #main -->
+
 
 <?php
-get_footer();
+get_footer( 'shop' );
