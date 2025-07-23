@@ -35,8 +35,7 @@
             </a>
           </div>
           <div class="footer-text pt-4">
-            <?php $footer_text_mod = ( !empty(get_theme_mod('undercustomz_footer_area_text')) ) ? get_theme_mod('undercustomz_footer_area_text') : 'Set Footer Text in Customize' ; ?>
-            <p> <?php echo $footer_text_mod; ?> </p>
+            <p> <?php echo get_theme_mod('undercustoms_site_description') ?? 'Set Description in Customizer' ; ?> </p>
           </div>
           <div class="social-menu pt-3">
             <?php if ( has_nav_menu( 'menu-social' ) ) { wp_nav_menu( array('theme_location' => 'menu-social', 'menu_class' => 'list-inline') ); } ?>
@@ -60,9 +59,9 @@
         <div class="col-md-6 col-lg-3 ps-lg-5">
           <h5 class="footer-title">Get in Touch</h5>
           <div class="footer-text">
-            <?php $phone_mod = ( !empty(get_theme_mod('undercustomz_contact_info_phone')) ) ? get_theme_mod('undercustomz_contact_info_phone') : 'Set Phone in Customize' ; ?>
-            <?php $email_mod = ( !empty(get_theme_mod('undercustomz_contact_info_email')) ) ? get_theme_mod('undercustomz_contact_info_email') : 'Set Email in Customize' ; ?>
-            <?php $address_mod = ( !empty(get_theme_mod('undercustomz_contact_info_address')) ) ? get_theme_mod('undercustomz_contact_info_address') : 'Set Address in Customize' ; ?>
+            <?php $phone_mod = get_theme_mod('undercustomz_contact_info_phone') ?? 'Set Phone in Customize' ; ?>
+            <?php $email_mod = get_theme_mod('undercustomz_contact_info_email') ?? 'Set Email in Customize' ; ?>
+            <?php $address_mod = get_theme_mod('undercustomz_contact_info_address') ?? 'Set Address in Customize' ; ?>
             <ul class="list-unstyled">
               <li><a href="tel:<?php echo $phone_mod; ?>"> <i class="fa fa-phone"></i> <?php echo $phone_mod; ?></a></li>
               <li><a href="mailto:<?php echo $email_mod; ?>"> <i class="fa fa-envelope"></i> <?php echo $email_mod; ?></a></li>
@@ -76,7 +75,7 @@
           <div class="footer-text">
             <p class="mb-0"> <small>LEAVE US YOUR EMAIL FOR EXCLUSIVE NEWS.</small> </p>
             <div class="newsletter-form pt-2">
-              <?php //$newsletter_mod = ( !empty(get_theme_mod('undercustomz_newsletter_form')) ) ? get_theme_mod('undercustomz_newsletter_form') : 'Set  Shortcode in Customize' ; ?>
+              <?php //$newsletter_mod = get_theme_mod('undercustomz_newsletter_form') ?? 'Set Shortcode in Customize'; ?>
               <?php //echo do_shortcode($newsletter_mod); ?>
               <?php //echo do_shortcode('[contact-form-7 id="30" title="Newsletter form 1"]'); ?>
             </div>
