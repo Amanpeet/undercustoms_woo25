@@ -58,10 +58,12 @@ get_header(); ?>
 
   <section id="maps" class="common-section pt-0 bg-light">
     <div class="container">
-      <div class="map my-5">
+      <div class="map mb-5">
         <h5> <i class="fa fa-map-marker"></i> <strong>Location</strong> </h5>
-        <?php $contact_map = ( !empty(get_theme_mod('undercustomz_contact_info_map_iframe')) ) ? get_theme_mod('undercustomz_contact_info_map_iframe') : 'Set Address in theme options' ; ?>
-        <?php echo $contact_map; ?>
+        <div class="img-thumbnail">
+          <?php $contact_map = ( !empty(get_theme_mod('undercustomz_contact_info_map_iframe')) ) ? get_theme_mod('undercustomz_contact_info_map_iframe') : 'Set Address in theme options' ; ?>
+          <?php echo $contact_map; ?>
+        </div>
         <!-- <iframe src="xxx" frameborder="0" style="width: 100%; height: 400px; border:1px solid #ccc; display:block;" allowfullscreen></iframe> -->
       </div>
     </div>

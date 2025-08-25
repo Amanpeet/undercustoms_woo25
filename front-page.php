@@ -17,6 +17,10 @@ get_header();
 
 <div id="frontpage" class="frontpage-area">
 
+  <section class="hero-section">
+    <?php get_template_part('template-parts/content', 'homepageslider'); ?>
+  </section>
+
   <section id="hero" class="hero-section border-bottom">
     <div class="hero-slider">
       <div id="carouselHeroSlider" class="carousel slide carousel-fade carousel-darkxx" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
@@ -148,6 +152,177 @@ get_header();
           <img class="img-thumbnail w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/img/about.jpg" alt="">
         </div>
       </div>
+    </div>
+  </section>
+
+    <section class="common-section bg-light">
+    <div class="container py-4">
+      <div class="section-title text-center mb-3">
+        <!-- <h6 class="text-color"> PROGRAMS </h6> -->
+        <h3 class="font-serif"><strong> Programs </strong></h3>
+        <p>These programs blends professional and personal growth, helping you uncover your strengths, values, and purpose while enhancing your leadership impact. </p>
+        <span class="line"></span>
+      </div>
+      <div class="row g-5">
+
+        <div class="col-md-6 col-lg-6">
+          <div class="card shadow-card rounded-4 p-4 mb-4 h-100">
+            <div class="row">
+              <div class="col-auto">
+                <div class="card-icon px-2">
+                  <i class="fa fa-compass fa-3x text-primary"></i>
+                </div>
+              </div>
+              <div class="col pt-2">
+                <h3 class="font-serif"> Know Yourself <br> to Grow Yourself </h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <h6>Duration: 12 Weeks | Format: One-on-One Coaching</h6>
+              <p>Once you truly know yourself, you can grow yourself - and when you grow, you naturally contribute more effectively to your community and organization.</p>
+              <p>This program is built on my coaching approach and methodology that blends professional and personal growth, helping you uncover your strengths, values, and purpose while enhancing your leadership impact.</p>
+              <h5>Program Highlights</h5>
+              <ul class="list-unstyled">
+                <li> <i class="fa fa-check-circle text-success"></i> Personalized One-on-One Sessions </li>
+                <li> <i class="fa fa-check-circle text-success"></i> Available in virtual or hybrid format </li>
+                <li> <i class="fa fa-check-circle text-success"></i> Weekly or fortnightly sessions (12 total) </li>
+                <li> <i class="fa fa-check-circle text-success"></i> Quick on-call support between sessions </li>
+              </ul>
+              <a class="btn btn-primary" href="<?php echo site_url(); ?>/"> Know More <i class="fa fa-arrow-right"></i> </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="card shadow-card rounded-4 p-4 mb-4 h-100">
+            <div class="row">
+              <div class="col-auto">
+                <div class="card-icon px-2">
+                  <i class="fa fa-bullseye fa-3x text-primary"></i>
+                </div>
+              </div>
+              <div class="col pt-2">
+                <h3 class="font-serif"> Mid-Career <br> Reboot Program</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <h6>Duration: 12 Weeks | Format: Practical Career Mastery</h6>
+              <p>Once you truly know yourself, you can grow yourself - and when you grow, you naturally contribute more effectively to your community and organization.</p>
+              <h5>Realign. Reflect. Rise.</h5>
+              <p>Designed for mid-career professionals seeking clarity, purpose, and renewed energy in their careers. Many professionals progress on autopilot—achieving milestones without pausing to ask:</p>
+              <ul class="list-unstyled">
+                <li> <i class="fa fa-check-circle text-success"></i> Is this aligned with who I really am? </li>
+                <li> <i class="fa fa-check-circle text-success"></i> Have I outgrown this version of myself? </li>
+              </ul>
+              <h5>Why It Works</h5>
+              <p>Transformation is intentional, not accidental. </p>
+              <a class="btn btn-primary" href="<?php echo site_url(); ?>/"> Know More <i class="fa fa-arrow-right"></i> </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="common-section bg-ghost border-top">
+    <div class="container py-5">
+      <div class="section-title text-center mb-4">
+        <!-- <h6 class="text-color"> Services </h6> -->
+        <h3 class="font-serif"> Services </h3>
+        <span class="line"></span>
+      </div>
+      <div class="row g-4 g-lg-5x justify-content-center" data-aos="fade-up">
+
+        <div class="col-md-4 col-lg-4">
+          <div class="card shadow-card zoom-this h-100">
+            <img class="card-img-top" src="<?php echo get_stylesheet_directory_uri(); ?>/img/service1.jpg" alt="service1">
+            <div class="card-body p-4">
+              <h3 class="card-title mb-3"> <span class="opacity-25">1.</span> Coaching </h3>
+              <p class="card-text text-muted">Partnering with clients to maximize personal and professional potential. </p>
+              <a class="btn btn-dark btn-sm" href="<?php echo site_url(); ?>/"> Learn More <i class="fa fa-arrow-right"></i> </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <div class="card shadow-card zoom-this h-100">
+            <img class="card-img-top" src="<?php echo get_stylesheet_directory_uri(); ?>/img/service2.jpg" alt="service2">
+            <div class="card-body p-4">
+              <h3 class="card-title mb-3"> <span class="opacity-25">2.</span> Mentoring </h3>
+              <p class="card-text text-muted">Long-term, growth-focused guidance sharing experience and wisdom. </p>
+              <a class="btn btn-dark btn-sm" href="<?php echo site_url(); ?>/"> Learn More <i class="fa fa-arrow-right"></i> </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <div class="card shadow-card zoom-this h-100">
+            <img class="card-img-top" src="<?php echo get_stylesheet_directory_uri(); ?>/img/service3.jpg" alt="service3">
+            <div class="card-body p-4">
+              <h3 class="card-title mb-3"> <span class="opacity-25">3.</span> Advisory </h3>
+              <p class="card-text text-muted">Strategic insights and frameworks for decision-making and performance. </p>
+              <a class="btn btn-dark btn-sm" href="<?php echo site_url(); ?>/"> Learn More <i class="fa fa-arrow-right"></i> </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- <div class="text-center mt-5">
+        <a class="btn btn-primary" href="<?php echo site_url(); ?>/services/"> Know More </a>
+      </div> -->
+    </div>
+  </section>
+
+  <section class="common-section bg-light border-top">
+    <div class="container py-5">
+      <div class="section-title text-center mb-4">
+        <!-- <h6 class="text-color"> E-BOOKS </h6> -->
+        <h3 class="font-serif"> My E-Books </h3>
+        <span class="line"></span>
+      </div>
+      <div class="row g-4 g-lg-5" data-aos="fade-up">
+
+        <div class="col-md-6 col-lg-6">
+          <div class="card shadow-card h-100">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about.jpg" class="img-fluid rounded-start" alt="">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h6 class="text-muted">FREE E-BOOK</h6>
+                  <h4 class="card-title">The Coaching Leadership Style</h4>
+                  <p class="text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p><a href="<?php echo site_url(); ?>/e-books/" class="btn btn-dark">Know More</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="card shadow-card h-100">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about.jpg" class="img-fluid rounded-start" alt="">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h6 class="text-muted">FREE E-BOOK</h6>
+                  <h4 class="card-title">The Coaching Leadership Style</h4>
+                  <p class="text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p><a href="<?php echo site_url(); ?>/e-books/" class="btn btn-dark">Know More</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- <div class="text-center mt-5">
+        <a class="btn btn-primary" href="<?php echo site_url(); ?>/services/"> Know More </a>
+      </div> -->
     </div>
   </section>
 
