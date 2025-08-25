@@ -2345,7 +2345,7 @@ p > a {
 @media all and (max-width: 576px) {
 
   .hero-slider .carousel .carousel-item {
-    height: 420px;
+    height: 360px;
   }
 
   .parallax-box .simpleParallax {
@@ -2360,16 +2360,8 @@ p > a {
     text-align: center;
   }
 
-  .wpcf7 .form-control {
-    text-align: center;
-  }
-
   .lead {
     font-size: 1.1rem;
-  }
-
-  .hero-slider .carousel .carousel-item {
-    height: 300px;
   }
 
 }
@@ -2378,7 +2370,7 @@ p > a {
 @media all and (max-width: 480px) {
 
   .hero-slider .carousel .carousel-item {
-    height: 200px;
+    height: 300px;
   }
 
 

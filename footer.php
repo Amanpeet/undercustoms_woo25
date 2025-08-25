@@ -90,12 +90,10 @@
     <div class="container">
       <div class="row py-4">
         <div class="col-lg-6">
-          <p class=""> &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>, All Rights Reserved. </p>
+          <p class="copyrights-text"> &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>, All Rights Reserved. </p>
         </div>
         <div class="col-lg-6">
-          <p class="text-end"> Designed by <a href="http://intiger.com" target="_blank">Intiger Web</a>. </p>
-          <div class="copyrights-text">
-          </div>
+          <p class="text-lg-end"> Designed by <a href="http://intiger.com" target="_blank"><u>Intiger Web</u></a>. </p>
         </div>
       </div>
     </div>
