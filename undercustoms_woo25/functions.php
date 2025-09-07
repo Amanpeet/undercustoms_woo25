@@ -204,14 +204,22 @@ if ( class_exists( 'WooCommerce' ) ) {
  */
 function excerpt($limit) {
   $excerpt = explode(' ', get_the_content(), $limit);
-  if (count($excerpt)>=$limit) {
+
+  if (count($excerpt) >= $limit) {
     array_pop($excerpt);
-    $excerpt = implode(" ",$excerpt).'...';
+    $excerpt = implode(" ", $excerpt) . '...';
   } else {
-    $excerpt = implode(" ",$excerpt);
+    $excerpt = implode(" ", $excerpt);
   }
-  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-  return $excerpt;
+
+  // Remove shortcodes like [gallery], etc.
+  $excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
+
+  // Strip HTML tags
+  $excerpt = strip_tags($excerpt);
+
+  // Sanitize output safely for display
+  return esc_html($excerpt);
 }
 
 /**
