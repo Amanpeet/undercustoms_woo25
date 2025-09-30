@@ -68,9 +68,9 @@ add_action('customize_preview_init', 'undercustomz_customize_preview_js');
 
 
 /**
- * Amanized customizer option for undercustoms
+ * Amanized customizer option for contact info
  */
-function undercustoms_customize_register_contact_info($wp_customize)
+function undercustomz_customize_register_contact_info($wp_customize)
 {
 
   // $wp_customize->add_panel( 'undercustomz_contact_info_panel', array(
@@ -148,30 +148,30 @@ function undercustoms_customize_register_contact_info($wp_customize)
 
 
 }
-add_action('customize_register', 'undercustoms_customize_register_contact_info');
+add_action('customize_register', 'undercustomz_customize_register_contact_info');
 
 
 
 /**
- * Amanized customizer option for undercustoms
+ * Amanized customizer options description
  */
-function undercustoms_extend_site_identity($wp_customize)
+function undercustomz_extend_site_identity($wp_customize)
 {
   // Add new setting
-  $wp_customize->add_setting('undercustoms_site_description', array(
+  $wp_customize->add_setting('undercustomz_site_description', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_text_field',
   ));
 
   // Add control to Site Identity section (after all others)
-  $wp_customize->add_control('undercustoms_site_description', array(
+  $wp_customize->add_control('undercustomz_site_description', array(
     'label' => __('Site Description', 'undercustoms'),
     'section' => 'title_tagline', // Site Identity section ID
     'type' => 'textarea',
     'priority' => 999, // Large number to ensure it's placed last
   ));
 }
-add_action('customize_register', 'undercustoms_extend_site_identity');
+add_action('customize_register', 'undercustomz_extend_site_identity');
 
 
 
@@ -179,7 +179,7 @@ add_action('customize_register', 'undercustoms_extend_site_identity');
 /**
  * Amanized NEW customizer Home Page Slider
  */
-function undercustoms_customize_register($wp_customize)
+function undercustomz_customize_register_homepageslider($wp_customize)
 {
   // Single Section for the Home Page Slider
   $wp_customize->add_section('home_page_slider_section', array(
@@ -189,14 +189,14 @@ function undercustoms_customize_register($wp_customize)
   ));
 
   // Repeater field using hidden JSON and JavaScript UI
-  $wp_customize->add_setting('undercustoms_slider_repeater', array(
+  $wp_customize->add_setting('undercustomz_slider_repeater', array(
     'default' => json_encode([]),
-    'sanitize_callback' => 'undercustoms_sanitize_repeater',
+    'sanitize_callback' => 'undercustomz_sanitize_repeater',
   ));
 
   $wp_customize->add_control(new WP_Customize_Control(
     $wp_customize,
-    'undercustoms_slider_repeater',
+    'undercustomz_slider_repeater',
     array(
       'label' => __('Slides', 'undercustoms'),
       'section' => 'home_page_slider_section',
@@ -205,22 +205,16 @@ function undercustoms_customize_register($wp_customize)
   ));
 
   // Enqueue customizer JS for repeater UI
-  add_action('customize_controls_enqueue_scripts', 'undercustoms_customizer_assets');
+  add_action('customize_controls_enqueue_scripts', 'undercustomz_customizer_assets');
 }
-add_action('customize_register', 'undercustoms_customize_register');
+add_action('customize_register', 'undercustomz_customize_register_homepageslider');
 
-function undercustoms_customizer_assets()
+function undercustomz_customizer_assets()
 {
-  wp_enqueue_script(
-    'undercustoms-repeater',
-    get_template_directory_uri() . '/inc/customizer-js.js',
-    array('jquery', 'customize-controls'),
-    null,
-    true
-  );
+  wp_enqueue_script( 'undercustoms-repeater', get_template_directory_uri() . '/inc/customizer-js.js', array('jquery', 'customize-controls'), null, true );
 }
 
-function undercustoms_sanitize_repeater($input)
+function undercustomz_sanitize_repeater($input)
 {
   $decoded = json_decode($input, true);
   if (!is_array($decoded))
