@@ -70,7 +70,7 @@
         <div class="container py-2">
           <div class="row no-gutters">
 
-            <div class="col-12 col-lg-3 order-1 order-lg-1">
+            <div class="col-12 col-lg-auto order-1 order-lg-1">
               <div class="site-branding">
                 <?php
                 if (has_custom_logo()) :
@@ -114,7 +114,9 @@
               <div class="pt-2 text-end">
                 <button id="search_btn" class="btn btn-default search-toggler" type="button"> <i class="fa fa-search"></i> </button>
                 <a class="btn btn-primary" href="<?php echo site_url(); ?>/contact/">Contact</a>
-                <?php if ( class_exists( 'WooCommerce' ) ) { undercustomz_woocommerce_header_cart(); } ?>
+                <div class="woo-cart-box d-inline-block">
+                  <?php if ( class_exists( 'WooCommerce' ) ) { undercustomz_woocommerce_header_cart(); } ?>
+                </div>
               </div>
             </div>
 

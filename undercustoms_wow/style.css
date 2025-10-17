@@ -1371,14 +1371,26 @@ p > a {
 }
 
 .titlemon {
-	background: #E8F1F5;
-	background-image: url('img/titlemon-bg2.jpg');
-	background-size: cover;
-	background-position: bottom;
+	background: #f0f5f9;
 	/* background: linear-gradient(-165deg, #005691 1%, #004A7C 100%); */
 	color: #111;
 	padding: 50px 0px;
 	text-align: center;
+  position: relative;
+}
+
+.titlemon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+	background-image: url('img/titlemon-bg.png');
+	background-size: contain;
+	background-position: bottom;
+	opacity: 0.15;
 }
 
 .titlemon h1 {
