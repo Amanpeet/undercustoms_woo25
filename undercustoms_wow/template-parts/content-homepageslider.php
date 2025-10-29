@@ -12,9 +12,9 @@
 // echo "</pre>";
 
 // Function to output slides on the frontend
-undercustoms_output_home_slider(); //execute function
-if ( ! function_exists( 'undercustoms_output_home_slider' ) ) {
-  function undercustoms_output_home_slider() {
+undercustomz_output_home_slider(); //execute function
+if ( ! function_exists( 'undercustomz_output_home_slider' ) ) {
+  function undercustomz_output_home_slider() {
 
     $slides_json = get_theme_mod('undercustomz_slider_repeater', json_encode([]));
     $slides = json_decode($slides_json, true);
@@ -133,4 +133,4 @@ if ( ! function_exists( 'undercustoms_output_home_slider' ) ) {
   }
 }
 
-// call undercustoms_output_home_slider() wherever needed
+// call undercustomz_output_home_slider() wherever needed

@@ -1,6 +1,6 @@
 (function($) {
 	wp.customize.bind('ready', function() {
-		const settingId = 'undercustoms_slider_repeater';
+		const settingId = 'undercustomz_slider_repeater';
 		const control = $('#customize-control-' + settingId);
 		const wrapper = $('<div class="custom-slider-repeater"></div>');
 		const addButton = $('<button type="button" class="button">Add New Slide</button>');
