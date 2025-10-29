@@ -8,7 +8,7 @@
  */
 
 // echo "<pre>";
-// var_dump(get_theme_mod('undercustoms_slider_repeater'));
+// var_dump(get_theme_mod('undercustomz_slider_repeater'));
 // echo "</pre>";
 
 // Function to output slides on the frontend
@@ -16,7 +16,7 @@ undercustoms_output_home_slider(); //execute function
 if ( ! function_exists( 'undercustoms_output_home_slider' ) ) {
   function undercustoms_output_home_slider() {
 
-    $slides_json = get_theme_mod('undercustoms_slider_repeater', json_encode([]));
+    $slides_json = get_theme_mod('undercustomz_slider_repeater', json_encode([]));
     $slides = json_decode($slides_json, true);
 
     if (empty($slides) || !is_array($slides)) return;
