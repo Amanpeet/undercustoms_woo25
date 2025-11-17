@@ -11,8 +11,6 @@
 // var_dump(get_theme_mod('undercustomz_slider_repeater'));
 // echo "</pre>";
 
-// Function to output slides on the frontend
-undercustomz_output_home_slider(); //execute function
 if ( ! function_exists( 'undercustomz_output_home_slider' ) ) {
   function undercustomz_output_home_slider() {
 
@@ -133,4 +131,5 @@ if ( ! function_exists( 'undercustomz_output_home_slider' ) ) {
   }
 }
 
-// call undercustomz_output_home_slider() wherever needed
+// Function to output slides on the frontend
+undercustomz_output_home_slider(); //execute function
