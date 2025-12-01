@@ -17,83 +17,24 @@ get_header();
 
 <div id="frontpage" class="frontpage-area">
 
-  <section class="hero-section">
+  <section id="hero" class="hero-section">
     <?php get_template_part('template-parts/content', 'homepageslider'); ?>
   </section>
 
-  <section id="hero" class="hero-section border-bottom">
-    <div class="hero-slider">
-      <div id="carouselHeroSlider" class="carousel slide carousel-fade carousel-darkxx" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselHeroSlider" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#carouselHeroSlider" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#carouselHeroSlider" data-bs-slide-to="2"></button>
-          <button type="button" data-bs-target="#carouselHeroSlider" data-bs-slide-to="3"></button>
-        </div>
-        <div class="carousel-inner">
+  <section id="banner" class="banner-section">
+    <div class="container">
+      <div class="row align-items-center pb-4">
 
-          <!-- <div class="carousel-item active">
-            <img src="<?php echo get_template_directory_uri() . '/img/slide1.jpg'; ?>" alt="">
-            <div class="carousel-caption">
-              <div class="container">
-                <div class="caption-box">
-                  <h4> Business Consulting </h4>
-                  <h2> Making Your Business Idea Come True </h2>
-                  <p class="mx-0"> Incubating with prudence — risk taking and pragmatism blended beautifully. </p>
-                  <a href="#" class="btn popModal">Get Quote</a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <div class="carousel-item active">
-            <img src="<?php echo (!empty(get_theme_mod('undercustomz_slider1_image'))) ? get_theme_mod('undercustomz_slider1_image') : get_template_directory_uri() . '/img/default.jpg'; ?>" alt="">
-            <div class="carousel-caption">
-              <div class="container">
-                <div class="caption-box">
-                  <?php echo get_theme_mod('undercustomz_slider1_caption'); ?>
-                </div>
-              </div>
-            </div>
+        <div class="col-md col-lg pe-lg-5" data-aos="fade-right">
+          <div class="banner-text pe-lg-5">
+            <h1> Best Preparation Portal for Your Services </h1>
+            <p> A provision of accounting services to a business enterprise through the means of IT enabled devices is referred to as Virtual Accounting. </p>
+            <a class="btn btn-primary btn-lg" href="#"> ENROLL NOW </a>
           </div>
-
-          <div class="carousel-item">
-            <img src="<?php echo (!empty(get_theme_mod('undercustomz_slider2_image'))) ? get_theme_mod('undercustomz_slider2_image') : get_template_directory_uri() . '/img/default.jpg'; ?>" alt="">
-            <div class="carousel-caption">
-              <div class="container">
-                <div class="caption-box">
-                  <?php echo get_theme_mod('undercustomz_slider2_caption'); ?>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img src="<?php echo (!empty(get_theme_mod('undercustomz_slider3_image'))) ? get_theme_mod('undercustomz_slider3_image') : get_template_directory_uri() . '/img/default.jpg'; ?>" alt="">
-            <div class="carousel-caption">
-              <div class="container">
-                <div class="caption-box">
-                  <?php echo get_theme_mod('undercustomz_slider3_caption'); ?>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="carousel-controls">
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeroSlider" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselHeroSlider" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
 
-        <div class="carousel-overlay">
-          <div class="container">
-          </div>
+        <div class="col-md-4 col-lg-5" data-aos="fade-left">
+          <img class="banner-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/default.jpg" alt="">
         </div>
 
       </div>
@@ -155,7 +96,7 @@ get_header();
     </div>
   </section>
 
-    <section class="common-section bg-light">
+  <section class="common-section bg-light">
     <div class="container py-4">
       <div class="section-title text-center mb-3">
         <!-- <h6 class="text-color"> PROGRAMS </h6> -->

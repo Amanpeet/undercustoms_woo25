@@ -28,8 +28,8 @@
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100..900&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
@@ -42,7 +42,7 @@
     <header id="site-header" class="site-header">
 
       <div class="header-topbar">
-        <div class="container py-2">
+        <div class="container-fluid px-lg-5 py-2">
           <div class="row">
 
             <div class="col-12 col-lg-6 d-none d-lg-block">
@@ -67,7 +67,7 @@
       </div>
 
       <div class="header-main">
-        <div class="container py-2">
+        <div class="container-fluid px-lg-5 py-2">
           <div class="row no-gutters">
 
             <div class="col-12 col-lg-auto order-1 order-lg-1">
