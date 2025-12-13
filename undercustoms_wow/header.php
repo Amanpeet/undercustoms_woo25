@@ -113,10 +113,19 @@
             <div class="col-12 col-lg-auto order-3 order-lg-3">
               <div class="pt-2 text-end">
                 <button id="search_btn" class="btn btn-default search-toggler" type="button"> <i class="fa fa-search"></i> </button>
-                <a class="btn btn-primary" href="<?php echo site_url(); ?>/contact/">Contact</a>
+                <a class="btn btn-primary" href="<?php echo site_url(); ?>/contact/">Get in Touch</a>
+
+                <?php if ( is_user_logged_in() ) : ?>
+                  <a class="btn btn-dark" href="<?php echo site_url(); ?>/dashboard/"> <i class="fa fa-user"></i> Dashboard </a>
+                  <a class="btn btn-dark" href="<?php echo wp_logout_url( home_url() ); ?>" title="Sign Out"> <i class="fa fa-sign-out"></i> </a>
+                <?php else : ?>
+                  <a class="btn btn-primary" href="<?php echo wp_login_url(); ?>"> <i class="fa fa-user"></i> Login / Register </a>
+                <?php endif; ?>
+
                 <div class="woo-cart-box d-inline-block">
                   <?php if ( class_exists( 'WooCommerce' ) ) { undercustomz_woocommerce_header_cart(); } ?>
                 </div>
+
               </div>
             </div>
 
