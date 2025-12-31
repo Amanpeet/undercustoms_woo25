@@ -208,17 +208,18 @@ if ( ! function_exists( 'undercustomz_woocommerce_header_cart' ) ) {
 			$class = '';
 		}
 		?>
-		<ul id="site-header-cart" class="site-header-cart">
-			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php undercustomz_woocommerce_cart_link(); ?>
-			</li>
-			<li>
-				<?php
-				$instance = array(
-					'title' => '',
-				);
 
-				the_widget( 'WC_Widget_Cart', $instance );
+		<ul id="site-header-cart" class="site-header-cart">
+			<li class="cart-icon <?php echo esc_attr( $class ); ?>">
+				<?php undercustomz_woocommerce_cart_link(); ?>
+        <a id="search_btn" class="btn cart-btn" href="#"> <i class="fa fa-shopping-bag fa-fw"></i> </a>
+			</li>
+			<li class="cart-items">
+				<?php
+          $instance = array(
+            'title' => '',
+          );
+          the_widget( 'WC_Widget_Cart', $instance );
 				?>
 			</li>
 		</ul>

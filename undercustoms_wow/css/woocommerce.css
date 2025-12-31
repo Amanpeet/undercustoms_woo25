@@ -56,16 +56,26 @@ Version: 1.2.3
 }
 
 #site-header-cart {
-  display: inline-block;
+	display: inline-block;
 	position: relative;
 	height: 44px;
-	min-width: 80px;
-	background: #eee;
+	/* min-width: 80px; */
+	/* background: #eee; */
 	margin: 0;
 	border-radius: 3px;
 }
 
-.site-header-cart .cart-contents {
+#site-header-cart .cart-icon {
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 2px 1px -1px rgba(0,0,0,0.3);
+}
+
+#site-header-cart .cart-contents .amount {
+  display: none
+}
+
+.site-header-cart .cart-contents  {
   display: none
 }
 
@@ -2115,7 +2125,7 @@ dl.variation dd {
     text-align: center;
     font-size: 18px;
     line-height: 1;
-    padding-top: 11px;
+    padding-top: 0;
   }
 
   .site-header-cart .cart-contents .amount {

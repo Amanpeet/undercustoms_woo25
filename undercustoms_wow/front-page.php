@@ -228,7 +228,7 @@ get_header();
           <div class="card shadow-card h-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about.jpg" class="img-fluid rounded-start" alt="">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/book1.png" class="img-fluid rounded-start" alt="">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -246,7 +246,7 @@ get_header();
           <div class="card shadow-card h-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about.jpg" class="img-fluid rounded-start" alt="">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/book2.png" class="img-fluid rounded-start" alt="">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -785,7 +785,7 @@ get_header();
           <div class="card h-100">
             <div class="card-body homepage-form">
               <h5>Write to us </h5>
-              <?php echo do_shortcode('[contact-form-7 id="44d6862" title="Homepage form 1"]'); ?>
+              <?php echo do_shortcode('[fluentform id="1"]'); ?>
             </div>
           </div>
         </div>
