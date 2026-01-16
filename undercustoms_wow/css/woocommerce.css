@@ -3301,6 +3301,16 @@ dl.variation dd {
 	border-top-right-radius: 10px;
 }
 
+@media all and (max-width: 768px) {
+
+  .single-product div.product .woocommerce-tabs ul.tabs li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+}
+
 .single-product div.product .woocommerce-tabs ul.tabs li a {
 	color: #fff;
 }
