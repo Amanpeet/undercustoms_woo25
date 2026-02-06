@@ -133,10 +133,38 @@ get_header();
             $loop->the_post();
             ?>
             <div class="col-sm-6 col-md-3 mb-4">
+
               <div class="card product-card h-100">
                 <a href="<?php echo get_permalink(); ?>"><img class="card-img-top zoom-this" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" /></a>
                 <div class="card-body text-center d-nonex">
-                  <h6 class="card-title"><a href="<?php echo get_permalink(); ?>"><strong><?php echo $product->get_title(); ?></strong></a></h6>
+                  <h6 class="product-name">
+                    <a href="<?php echo get_permalink(); ?>"><strong><?php echo $product->get_title(); ?></strong></a>
+                  </h6>
+
+                  <div class="product-price">
+                    <h6 class="product-amount"><?php echo wc_get_product( get_the_ID() )->get_price_html(); ?></h6>
+                  </div>
+
+                  <div class="add-to-cart">
+                    <?php
+                      echo sprintf( '<a href="%s" data-quantity="1" class="%s" %s>%s</a>',
+                        esc_url( $product->add_to_cart_url() ),
+                        esc_attr( implode( ' ', array_filter( array(
+                          'button', 'product_type_' . $product->get_type(),
+                          $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
+                          $product->supports( 'ajax_add_to_cart' ) ? 'ajax_add_to_cart' : '',
+                        ) ) ) ),
+                        wc_implode_html_attributes( array(
+                          'data-product_id'  => $product->get_id(),
+                          'data-product_sku' => $product->get_sku(),
+                          'aria-label'       => $product->add_to_cart_description(),
+                          'rel'              => 'nofollow',
+                        ) ),
+                        esc_html( $product->add_to_cart_text() )
+                      );
+                    ?>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -248,7 +276,7 @@ get_header();
 
         <div class="col-lg pe-lg-5">
           <div class="section-titlexx pt-lg-4">
-            <h4 class="mb-4"> Black Containers </h4>
+            <h4 class="mb-4"> Category One </h4>
             <div class="row">
               <!-- woocommerce loop -->
               <?php
@@ -292,7 +320,7 @@ get_header();
 
         <div class="col-lg pe-lg-5">
           <div class="section-titlexx pt-lg-4">
-            <h4 class="mb-4"> Clear Containers </h4>
+            <h4 class="mb-4"> Category Two </h4>
             <div class="row">
               <!-- woocommerce loop -->
               <?php

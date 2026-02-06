@@ -212,7 +212,7 @@ if ( ! function_exists( 'undercustomz_woocommerce_header_cart' ) ) {
 		<ul id="site-header-cart" class="site-header-cart">
 			<li class="cart-icon <?php echo esc_attr( $class ); ?>">
 				<?php undercustomz_woocommerce_cart_link(); ?>
-        <a id="search_btn" class="btn cart-btn" href="<?php echo esc_url( wc_get_cart_url() ); ?>"> <i class="fa fa-shopping-bag fa-fw"></i> </a>
+        <a id="cart_btn" class="btn cart-btn" href="<?php echo esc_url( wc_get_cart_url() ); ?>"> <i class="fa fa-shopping-bag fa-fw"></i> </a>
 			</li>
 			<li class="cart-items">
 				<?php
