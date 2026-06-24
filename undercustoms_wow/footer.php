@@ -113,7 +113,7 @@
       </div>
       <div class="modal-body">
         <div class="popup-form pt-2 px-lg-5">
-          <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
+          <?php echo do_shortcode('[fluentform id="1"]'); ?>
         </div>
       </div>
     </div>

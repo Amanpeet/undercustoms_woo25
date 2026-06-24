@@ -20,8 +20,8 @@ function undercustomz_woocommerce_setup() {
 	add_theme_support(
 		'woocommerce',
 		array(
-			'thumbnail_image_width' => 150,
-			'single_image_width'    => 300,
+			'thumbnail_image_width' => 600,
+			'single_image_width'    => 1200,
 			'product_grid'          => array(
 				'default_rows'    => 3,
 				'min_rows'        => 1,
@@ -208,17 +208,18 @@ if ( ! function_exists( 'undercustomz_woocommerce_header_cart' ) ) {
 			$class = '';
 		}
 		?>
-		<ul id="site-header-cart" class="site-header-cart">
-			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php undercustomz_woocommerce_cart_link(); ?>
-			</li>
-			<li>
-				<?php
-				$instance = array(
-					'title' => '',
-				);
 
-				the_widget( 'WC_Widget_Cart', $instance );
+		<ul id="site-header-cart" class="site-header-cart">
+			<li class="cart-icon <?php echo esc_attr( $class ); ?>">
+				<?php undercustomz_woocommerce_cart_link(); ?>
+        <a id="cart_btn" class="btn cart-btn" href="<?php echo esc_url( wc_get_cart_url() ); ?>"> <i class="fa fa-shopping-bag fa-fw"></i> </a>
+			</li>
+			<li class="cart-items">
+				<?php
+          $instance = array(
+            'title' => '',
+          );
+          the_widget( 'WC_Widget_Cart', $instance );
 				?>
 			</li>
 		</ul>
