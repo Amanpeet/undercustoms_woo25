@@ -35,7 +35,7 @@
             </a>
           </div>
           <div class="footer-text pt-4">
-            <p> <?php echo get_theme_mod('undercustoms_site_description') ?? 'Set Description in Customizer' ; ?> </p>
+            <p> <?php echo get_theme_mod('undercustomz_site_description') ?? 'Set Description in Customizer' ; ?> </p>
           </div>
           <div class="social-menu pt-3">
             <?php if ( has_nav_menu( 'menu-social' ) ) { wp_nav_menu( array('theme_location' => 'menu-social', 'menu_class' => 'list-inline') ); } ?>
