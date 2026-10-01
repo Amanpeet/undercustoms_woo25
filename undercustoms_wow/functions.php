@@ -232,3 +232,10 @@ function post_link_attributes($output) {
   return str_replace('<a href=', '<a '.$code.' href=', $output);
 }
 
+/**
+ * Custom html field for pages
+ * USE FOLLOWING TO OUTPUT:
+ * Undercustoms_Custom_HTML_Field::output();
+ */
+require_once get_template_directory() . '/inc/class-custom-html-field.php';
+
